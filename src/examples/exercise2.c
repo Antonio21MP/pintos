@@ -5,23 +5,23 @@ int
 main(void)
 {
 
-  int pid[5];
+  int array[5];
 
   semainst(2);
   semainit(0,5);
   semainit(1,0);
 
-  pid[0] = exec("writer 1");
-  pid[1] = exec("reader 2");
-  pid[2] = exec("reader 3");
-  pid[3] = exec("reader 4");
-  pid[4] = exec("reader 5");
+  array[0] = exec("writer 1");
+  array[1] = exec("reader 2");
+  array[2] = exec("reader 3");
+  array[3] = exec("reader 4");
+  array[4] = exec("reader 5");
 
-  wait(pid[0]);
-  wait(pid[1]);
-  wait(pid[2]);
-  wait(pid[3]);
-  wait(pid[4]);
+  wait(array[0]);
+  wait(array[1]);
+  wait(array[2]);
+  wait(array[3]);
+  wait(array[4]);
 
   return 0;
 }
